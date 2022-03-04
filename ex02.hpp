@@ -2,20 +2,33 @@
 // the function below now only works with integers, change it to work with any type
 // also fill out the body
 
-class Calculator {
-private:
-    int num1, num2;
-
+template<typename T>
+class Calculator
+{
 public:
-    Calculator(int n1, int n2) {
-        num1 = n1;
-        num2 = n2;
+    T num1;
+    T num2;
+
+    Calculator(T num1, T num2) {
+        this->num1 = num1;
+        this->num2 = num2;
     }
 
-    int add() { return 0; /*your code here*/ }
-    int subtract() { /*your code here*/ }
-    int multiply() { /*your code here*/ }
-    int divide() { /*your code here*/ }
+    T add() {
+        return num1 + num2;
+    }
+
+    T multiply() {
+        return num1 * num2;
+    }
+
+    T divide() {
+        return num1 / num2;
+    }
+
+    T subtract() {
+        return num1 - num2;
+    }
 };
 
 
